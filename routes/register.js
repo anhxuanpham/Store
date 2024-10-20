@@ -9,7 +9,7 @@ router.post('/', function (req, res, next) {
             res.json({ user: user });
         })
         .catch((err) => {
-            res.status(400).json({ error: err.message }); // Sử dụng status 400 cho lỗi người dùng
+            res.status(400).json({ error: err.message });
         });
 });
 

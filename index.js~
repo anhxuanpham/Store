@@ -28,8 +28,8 @@ app.use('/', home);
 app.use('/register', register);
 app.use('/login', login);
 app.use(function (err, req,res, next) {
-    console.error('Error: ', +err);
-    res.render('error', {message: err.message});
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 })
 
 
